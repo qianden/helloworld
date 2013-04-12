@@ -8,12 +8,20 @@
 #ifndef HELLOER_H
 #define	HELLOER_H
 
+#include<iostream>
+
+using namespace std;
+
+
 class Helloer {
 public:
     Helloer();
     Helloer(const Helloer& orig);
+    Helloer(const string& who);
     virtual ~Helloer();
+    string message() const;
 private:
+    string who;
 
 };
 
